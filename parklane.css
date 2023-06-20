@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: rgb(185, 203, 209);
+   /*content: '';
+    background-image: url(Logo/juan-encalada-6mcVaoGNz1w-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.35;*/
+
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .contact{
+    position: relative;
+    background-color: rgb(189, 20, 20);
+    color: white;
+    font-size: 15px;
+    padding: 15px 35px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border-radius: 40px;
+    text-align: right;
+    margin-right: 30px;
+}
+
+.contactUs{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 60px;
+    background-color: cadetblue;
+    color: white;
+    z-index: 10000;
+    box-shadow: 0 0 0 100vh rgba(9, 0, 0, 0.95);
+    visibility: hidden;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.contact-Us.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.logo-image{
+    width: 50%;
+    height: 40%;
+}
+
+
+/*header nav{
+    position: relative;
+}
+
+header nav ul{
+    position: relative;
+    display: flex;
+}
+
+header nav ul li{
+    list-style: none;
+}
+
+header nav ul li a{
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+header nav ul li a:hover{
+    color: cadetblue;
+}*/
+
+section{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 100px;
+}
+
+section .contentBx{
+    position: relative;
+    max-width: 600px;
+    z-index: 1000;
+}
+
+section .contentBx h2{
+    font-size: 60px;
+    text-transform: uppercase;
+    color: rgb(15, 167, 218);
+}
+
+section .contentBx p{
+    font-size: 18px;
+    color: black;
+}
+
+section .contentBx .countdown{
+    display: flex;
+    margin: 20px 0;
+}
+
+section .contentBx .countdown .time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 20px;
+    font-size: 48px;
+    min-width: 110px;
+    font-weight: 700;
+    padding: 10px 5px 15px;
+    background-color: azure;
+    color: rgb(189, 20, 20);
+    border-radius: 4px;
+}
+
+section .contentBx .countdown .time span{
+    margin-top: -10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: cadetblue;
+}
+
+section .contentBx a{
+    position: relative;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: rgb(189, 20, 20);
+    color: white;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 40px;
+    margin-bottom: 25px;
+}
+
+.wave{
+    max-width: 500px;
+    margin-top: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 40px;
+    padding: 40px;
+}
+
+section .imgBx img{
+    max-width: 500px;
+    /*width: 100%;*/
+    margin-top: 100px;
+    z-index: 1;
+    margin: 40px;
+    padding: 40px;
+}
+
+section .sci{
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    filter: invert(1);
+}
+
+section .sci li a{
+    display: block;
+    margin-right: 30px;
+    transform: scale(2);
+    color: white;
+}
+
+section .sci li a:hover{
+  color: navajowhite;
+}
+
+
+.newsletter{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 60px;
+    background-color: rgb(15, 167, 218);
+    color: black;
+    border-radius: 8px;
+    z-index: 10000;
+    box-shadow: 0 0 0 100vh rgba(2, 0, 0, 0.85);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.newsletter.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.newsletter h2{
+    font-size: 48px;
+}
+
+.newsletter p{
+    font-size: 20px;
+}
+
+.newsletter .inputBox{
+    margin-top: 20px;
+}
+
+.newsletter .inputBox input{
+    padding: 5px;
+    outline: none;
+    margin: 4px;
+    width: 100%;
+    font-size: 18px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter .inputBox input[type="submit"]{
+    background-color: rgb(189, 20, 20);
+    color: white;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.newsletter .close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+@media (max-width: 991px){
+    section{
+        flex-direction: column;
+        padding-top: 150px;
+        height: auto;
+    }
+
+    section .contextBx{
+        max-width: 100%;
+    }
+
+    section .imgBx img{
+        margin-left: 0;
+    }
+}
+
+
+@media (max-width: 768px){
+    header{
+        padding: 20px 50px;
+    }
+
+    section{
+        flex-direction: column;
+        padding: 120px 50px 100px;
+        height: auto;
+    }
+
+    section .contentBx h2{
+        font-size: 40px;
+    }
+
+    section .contentBx p{
+        font-size: 16px;
+    }
+
+    section .contentBx .countdown .time{
+        font-size: 30px;
+        min-width: 70px;
+        margin-right: 5px;
+    }
+
+    section .contentBx .countdown .time span{
+        font-size: 14px;
+    }
+
+    section .contentBx a{
+        position: relative;
+        margin-top: 10px;
+        display: inline-block;
+        font-size: 16px;
+        letter-spacing: 2px;
+        padding: 10px 25px;
+        text-decoration: none;
+        border-radius: 40px;
+    }
+
+    section .sci{
+        left: 50px;
+    }
+
+    .newsletter{
+        width: 90%;
+        padding: 30px;
+    }
+
+    .newsletter .inputBox input[type="submit"]{
+        margin-top: 10px;
+        width: 100px;
+    }
+
+    .newsletter h2{
+        font-size: 36px;
+    }
+    
+}
+
+@media (max-width: 311px) {
+    header{
+        flex-direction: column;
+    }
+
+    .logo-image{
+        width: 100%;
+        height: 70%;
+        margin-left: 10px;
+    }
+    
+    header .contact{
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+
+    section .contentBx{
+        margin-right: auto;
+    }
+
+    section .contentBx h2{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    section .contentBx p{
+        font-size: 13px;
+    }
+
+    section .contentBx .countdown .time{
+        font-size: 20px;
+        min-width: 50px;
+        margin-right: 10px;
+    }
+
+    section .contentBx .countdown .time span{
+        font-size: 12px;
+    }
+
+    section .contentBx a{
+        font-size: 12px;
+    }
+
+    .wave{
+        display: none;
+    }
+
+    section .imgBx img{
+        display: none;
+    }
+
+}

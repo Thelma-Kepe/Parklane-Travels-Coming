@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parklane Coming soon Page</title>
+    <link rel="stylesheet" href="parklane.css">
+</head>
+<body>
+    <header>
+            <a href="#" class="logo"><img src="Logo/transparent.png" alt="logo" class="logo-image"></a>
+            <a href="#"§1   qaszx class="contact">Contact</a>
+    </header>
+
+    <div class="contactUs">
+        <h2>CONTACT US</h2>
+        <p>Available 24/7</p>
+        <div class="inputBox">
+            <ul>
+                <li>Email: <a href="#">peyechut@gmail.com</a></li>
+                <li>Phone: <a href="#">+237697892590</a></li>
+
+            </ul>
+        </div>
+    </div>        
+
+    
+    <section>
+        <img src="Logo/jonathan-borba-LR5O79shvro-unsplash.jpg" alt="" class="wave">
+        <div class="contentBx">
+            <h2>
+                Coming Soon
+            </h2>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
+                the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of 
+                type and scrambled it to make a type specimen book.
+            </p>
+            <div class="countdown">
+                <div class="time"><div id="day"></div><span>Days</span></div>
+                <div class="time"><div id="hour"></div><span>Minutes</span></div>
+                <div class="time"><div id="minute"></div><span>Hours</span></div>
+                <div class="time"><div id="second"></div><span>Seconds</span></div>
+            </div>
+            <a href="#" onclick="toggle();">Notify Me!</a>
+        </div>
+        <div class="imgBx">
+            <img src="Logo/juan-encalada-6mcVaoGNz1w-unsplash.jpg" alt="">
+        </div>
+        <ul class="sci">
+            <li><a href="#" class="icon-facebook"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="https://instagram.com/parklane.travels?igshid=MzRlODBiNWFlZA==" class="icon-instagram"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="http://www.twitter.com/Parklanetravels" class="icon-twitter"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="https://www.linkedin.com/company/parklane-travels/" class="icon-linkedin"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+    </section>
+
+    <div class="newsletter">
+        <h2>Stay Tuned</h2>
+        <p>Get notified at Launch</p>
+        <div class="inputBox">
+            <form action="">
+                <div><input type="text" name="" required placeholder="Name"></div>
+                <div><input type="email" name="" required placeholder="Enter Email Address"></div>
+                <div><input type="tel" required placeholder="Phone Number"></div>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="close" onclick="toggle();"><ion-icon name="close-outline"></ion-icon></div>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+
+        function toggle(){
+            var newsletter = document.querySelector('.newsletter');
+            newsletter.classList.toggle('active');
+        }
+
+
+
+
+
+
+        var countDate = new Date('Jan 1, 2024 00:00:00').getTime();
+
+        function newYear(){
+            var now = new Date().getTime();
+            gap = countDate - now;
+
+            var second = 1000;
+            var minute = second * 60;
+            var hour = minute * 60;
+            var day = hour * 24;
+
+            var d = Math.floor(gap / (day));
+            var h = Math.floor((gap % (day)) / (hour));
+            var m = Math.floor((gap % (hour)) / (minute));
+            var s = Math.floor((gap % (minute)) / (second));
+
+            document.getElementById('day').innerText = d;
+            document.getElementById('hour').innerText = h;
+            document.getElementById('minute').innerText = m;
+            document.getElementById('second').innerText = s;
+        }
+
+        setInterval(function(){
+            newYear();
+        },1000);
+    </script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
